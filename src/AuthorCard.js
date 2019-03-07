@@ -3,9 +3,12 @@ import React, { Component } from "react";
 class AuthorCard extends Component {
   render() {
     const author = this.props.author;
-    const authorName = `${author.first_name} ${author.last_name}`
+    const authorName = `${author.first_name} ${author.last_name}`;
     return (
-      <div className="col-lg-4 col-md-6 col-12">
+      <div
+        onClick={() => this.props.selectAuthor(author)}
+        className="col-lg-4 col-md-6 col-12"
+      >
         <div className="card">
           <div className="image">
             <img
